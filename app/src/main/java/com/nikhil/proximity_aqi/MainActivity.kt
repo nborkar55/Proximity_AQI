@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
         mainViewModel = ViewModelProvider(this@MainActivity).get(MainViewModel::class.java)
         if (isNetworkAvailable()) {
-            // tvInternet.visibility = View.GONE
+            tvInternet.visibility = View.GONE
             myrecyclerview.visibility = View.VISIBLE
             mainViewModel.sendSubscribe().also { ws = it }
 
